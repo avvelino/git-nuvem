@@ -8,6 +8,11 @@ app.get('/', (req, res) => {
     res.sendFile('index.html', {root: path.join(__dirname, 'public')});
 })
 
+app.get('/js', (req, res) => {
+    console.log('js executou')
+    res.sendFile('algoritmos_js.html', {root: path.join(__dirname, 'public')});
+  });
+
 app.listen(process.env.PORT || 3000);
 
 module.exports = app;
